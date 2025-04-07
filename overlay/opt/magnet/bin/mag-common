@@ -1,0 +1,17 @@
+#!/bin/bash
+# Author  : Steve Michael
+# Date    : 06 April 2025
+# Purpose : Common environment variables and functions
+
+export ESC="\x1B"
+export RED="${ESC}[1;31m"
+export BLUE="${ESC}[1;34m"
+export GREEN="${ESC}[1;32m"
+export WHITE="${ESC}[97m"
+export YELLOW="${ESC}[1;33m"
+export NC="${ESC}[0m"
+
+show-err-dialog() {
+  local message="$1"
+  dialog --title "Notification" --msgbox "$message" 8 60
+}
